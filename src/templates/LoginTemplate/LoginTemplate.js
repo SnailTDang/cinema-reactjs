@@ -7,9 +7,9 @@ import Header from "../HomeTemplates/Layout/Header/Header";
 
 
 const LoginTemplate = (props) => {
-    // if (localStorage.getItem(USER_LOGIN)) {
-    //     return <Redirect to='/' />
-    // }
+    if (localStorage.getItem(USER_LOGIN)) {
+        return <Redirect exact to='/cinema-reactjs/' />
+    }
     const { Component, ...restProps } = props;
     return <Route {...restProps} render={(propsRoute) => {
         return <>

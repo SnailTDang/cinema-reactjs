@@ -1,7 +1,5 @@
 import React from 'react'
-// import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { Link } from 'react-scroll'
 import { history } from '../../../../App'
 import { USER_LOGIN } from '../../../../ulti/constants/Settings'
 
@@ -18,14 +16,14 @@ const renderUser = (user) => {
     if (!user) {
         return (
             <div className="items-center flex-shrink-0 hidden lg:flex">
-                <NavLink to='/login' exact
+                <NavLink to='/cinema-reactjs/login' exact
                     className={isActive => {
                         return isActiveMenu(isActive) + " border-none"
                     }}>
                     Sign in
                 </NavLink>
                 <span className='text-3xl'>/</span>
-                <NavLink exact to='/register'
+                <NavLink exact to='/cinema-reactjs/register'
                     className={isActive => {
                         return isActiveMenu(isActive) + " border-none"
                     }}>
@@ -41,7 +39,7 @@ const renderUser = (user) => {
                 <button className="text-lg self-center font-semibold px-3 rounded hover:text-orange-main"
                     onClick={() => {
                         localStorage.removeItem(USER_LOGIN)
-                        history.push('/')
+                        history.push('/cinema-reactjs/')
                     }}
                 >
                     Log Out
@@ -53,47 +51,35 @@ const renderUser = (user) => {
 }
 
 export default function Header(props) {
-    // const showTimescroll = useRef(null)
     let userLogin = JSON.parse(localStorage.getItem(USER_LOGIN))
     return (
         <>
             <header className="p-4 dark:bg-coolGray-800 dark:text-coolGray-100 bg-strong-blue bg-opacity-500/75 w-100 z-10000 text-white sticky top-0 left-0 right-0">
                 <div className="container flex justify-between h-16 mx-auto">
-                    <a href='/' className="flex items-center p-2">
+                    <a href='/cinema-reactjs/' className="flex items-center p-2">
                         <img src={'https://snailtdang.github.io/cyberphone/img/Brandlogo.png'} alt="" className='w-20' />
                     </a>
                     <ul className="items-stretch hidden space-x-3 lg:flex mb-0">
                         <li className="flex">
-                            <NavLink to="/home" exact
+                            <NavLink to="/cinema-reactjs/home" exact
                                 className={isActive => isActiveMenu(isActive)}
                             >HOME</NavLink>
                         </li>
                         <li className="flex">
-                            <a href="/#showtimes-cinema" className="nav-link flex items-center px-4 -mb-1 text-white text-lg unselected font-semibold hover:text-orange-main">SHOWTIMES</a>
-                            {/* <NavLink exact to='#showtimes-cinema' className={`nav-NavLink flex items-center px-4 -mb-1 text-white text-lg unselected font-semibold hover:text-orange-main`}>SHOWTIMES</NavLink> */}
+                            <NavLink exact to="/cinema-reactjs/home/#showtimes-cinema" className="nav-link flex items-center px-4 -mb-1 text-white text-lg unselected font-semibold hover:text-orange-main">SHOWTIMES</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink to="/news" exact
+                            <NavLink to="/cinema-reactjs/news" exact
                                 className={isActive => isActiveMenu(isActive)}
                             >NEWS</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink to="/contact" exact
+                            <NavLink to="/cinema-reactjs/contact" exact
                                 className={isActive => isActiveMenu(isActive)}
                             >CONTACT</NavLink>
                         </li>
-                        {/* <li className="flex">
-                            <NavLink to="/contact"
-                                className={isActive => isActiveMenu(isActive)}
-                            >Contact <h3></h3></NavLink>
-                        </li> */}
                     </ul>
                     {renderUser(userLogin)}
-                    {/* <div className="items-center flex-shrink-0 hidden lg:flex">
-
-                        <NavLink to='/login' exact className="self-center px-8 py-3 rounded" >Sign in</NavLink>
-                        <button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900">Sign up</button>
-                    </div> */}
                     <button className="p-4 lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-coolGray-100">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

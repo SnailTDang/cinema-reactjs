@@ -89,7 +89,7 @@ export default function DeitailMovies(props) {
                                                     <div className="grid grid-cols-9 gap-3 py-4">
                                                         {cinema.lichChieuPhim?.map((shTimes, index) => {
                                                             return (
-                                                                <NavLink exact to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2'>
+                                                                <NavLink exact to={`/cinema-reactjs/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2'>
                                                                     {moment(shTimes.ngayChieuGioChieu).format('hh:mm A')}
                                                                 </NavLink>
                                                             )

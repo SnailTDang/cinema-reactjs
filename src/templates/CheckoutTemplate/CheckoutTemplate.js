@@ -8,7 +8,7 @@ import { USER_LOGIN } from "../../ulti/constants/Settings";
 
 const CheckoutTemplate = (props) => {
     if (!localStorage.getItem(USER_LOGIN)) {
-        return <Redirect to='/login' />
+        return <Redirect to='/cinema-reactjs/login' />
     }
     const { Component, ...restProps } = props;
     return <Route {...restProps} render={(propsRoute) => {

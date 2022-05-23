@@ -1,5 +1,5 @@
 import './App.css';
-import { Router, Switch, Route } from 'react-router-dom'
+import { Router, Switch, Route, Redirect } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import HomeTemplate from './templates/HomeTemplates/HomeTemplate';
 import { ContactTemplate } from './templates/ContactTemplate/ContactTemplate';
@@ -22,6 +22,8 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 
+
+
 const CheckoutTemplateLazy = lazy(() => import('./templates/CheckoutTemplate/CheckoutTemplate'))
 const HomepageLazy = lazy(() => import('./templates/HomeTemplates/HomeTemplate'))
 
@@ -37,15 +39,17 @@ function App() {
           {/* <Suspense fallback={<Loading />}>
             <HomepageLazy exact path='/' Component={Home} />
           </Suspense> */}
-          <HomeTemplate exact path='/' Component={Home} />
-          <ContactTemplate exact path='/contact' Component={Contact} />
-          <HomeTemplate exact path='/news' Component={News} />
-          <LoginTemplate exact path='/login' Component={Login} />
-          <SignUpTemplate exact path='/register' Component={Register} />
-          <DetailTemplate exact path='/movie/:id' Component={DeitailMovies} />
+          <HomeTemplate exact path='/cinema-reactjs/' Component={Home} />
+          <HomeTemplate exact path='/cinema-reactjs/home' Component={Home} />
+          <ContactTemplate exact path='/cinema-reactjs/contact' Component={Contact} />
+          <HomeTemplate exact path='/cinema-reactjs/news' Component={News} />
+          <LoginTemplate exact path='/cinema-reactjs/login' Component={Login} />
+          <SignUpTemplate exact path='/cinema-reactjs/register' Component={Register} />
+          <DetailTemplate exact path='/cinema-reactjs/movie/:id' Component={DeitailMovies} />
           <Suspense fallback={<Loading />}>
-            <CheckoutTemplateLazy exact path='/checkout/:id' Component={Checkout} />
+            <CheckoutTemplateLazy exact path='/cinema-reactjs/checkout/:id' Component={Checkout} />
           </Suspense>
+          {/* <Redirect exact path='/cinema-reactjs/checkout/:id' Component={Checkout}/> */}
         </Switch>
       </Router>
     </div>

@@ -1,0 +1,1 @@
+export const POST_MOVIE_BANNER = "POST_MOVIE_BANNER";

@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+
+@layer base {
+    body {
+        font-family: "Saira Semi Condensed", system-ui, sans-serif !important;
+    }
+    p,
+    span,
+    strong {
+        font-family: "Noto Sans", sans-serif;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #cd93b0, #5fbef6);
+}
+
+::-webkit-scrollbar-track {
+    background: #e8e8e8;
+}
+
+.wrapper {
+    background-color: #0f1d2f;
+    max-width: 1920px;
+}
+
+.active-button-film {
+    background-color: #ff5400;
+    color: #ffff;
+}
+
+.backdrop {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.backdrop-info {
+    background: rgba(65, 51, 51, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.ant-tabs-nav-wrap {
+    justify-content: center;
+    padding: 15px 0;
+    /* height: 140px; */
+}
+.ant-tabs-ink-bar {
+    background-color: transparent !important;
+}
+
+.ant-tabs-tab {
+    /* transition: all 0.3s ease-in; */
+}
+
+.ant-tabs-tab > #rc-tabs-0-tab-0 img,
+.ant-tabs-tab > #rc-tabs-0-tab-1 img,
+.ant-tabs-tab > #rc-tabs-0-tab-2 img,
+.ant-tabs-tab > #rc-tabs-0-tab-3 img,
+.ant-tabs-tab > #rc-tabs-0-tab-4 img,
+.ant-tabs-tab > #rc-tabs-0-tab-5 img {
+    opacity: 0.5;
+    transition: all 0.3s ease-in;
+}
+
+.ant-tabs-tab-active p:first-child {
+    color: #ff5400;
+}
+
+.ant-tabs-tab-active > #rc-tabs-0-tab-0 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-1 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-2 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-3 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-4 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-5 img {
+    opacity: 1;
+    border-radius: 50%;
+    /* border: 10px solid #ff5400; */
+    transform: scale(1.3);
+}
+.bg-btn-home {
+    position: relative;
+}
+.bg-btn-home::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    /* transform: translate(-50%, -50%); */
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border: 2px solid #fff;
+}
+
+.screen-thumb img {
+    filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
+    -webkit-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
+    -moz-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
+}
+

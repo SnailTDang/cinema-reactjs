@@ -1,0 +1,8 @@
+export const TOKEN_CYBER = "accessToken";
+// export const DOMAIN_CYBER = 'http://movieapi.cyberlearn.vn'
+export const DOMAIN_CYBER = 'https://movienew.cybersoft.edu.vn'
+export const USER_LOGIN = 'USER_LOGIN'
+export const API_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaG9odXluaGR1bmciLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJob2h1eW5oZHVuZ0BjeWJlcnNvZnQudm4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiUXVhblRyaSIsImhvaHV5bmhkdW5nQGN5YmVyc29mdC52biIsIkdQMDEiXSwibmJmIjoxNjUzMjUzMzc1LCJleHAiOjE2NTMyNTY5NzV9.kms6mVrYjsP41EQqRuato9ZT_b1GjQbONDfJfgcT02g'
+export const USER_LOGIN_FAIL = 'USER_LOGIN_FAIL'
+export const USER_SIGN_IN = 'USER_SIGN_IN'
+export const USER_SIGNIN_FAIL = 'USER_SIGNIN_FAIL'

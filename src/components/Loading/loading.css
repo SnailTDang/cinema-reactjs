@@ -1,0 +1,51 @@
+.loadpage {
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loader__logo {
+    background: linear-gradient(to bottom, #fffce9 0, #ffe1ec 100%);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 0%);
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    animation: loader 1.5s infinite;
+}
+
+.loader__logo img {
+    width: 100%;
+}
+
+.pre-text {
+    width: 60%;
+    margin: 20px auto;
+    font-size: 24px;
+    color: #6a6a8e;
+    line-height: 30px;
+}
+
+@keyframes loader {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 30px transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}

@@ -1,0 +1,29 @@
+.seat {
+    margin: 3px;
+    width: 35px;
+    height: 35px;
+}
+
+.seat-normal {
+    cursor: pointer;
+    background: url("http://starlight.vn/content/img/seat-standard.png") !important;
+    background-size: contain !important;
+}
+
+.seat-booked {
+    cursor: none;
+    background: url("http://starlight.vn/content/img/seat.png") !important;
+    background-size: contain !important;
+}
+
+.seat-booking {
+    cursor: pointer;
+    background: url("http://starlight.vn/content/img/seat-selected.png") !important;
+    background-size: contain !important;
+}
+
+.seat-vip {
+    cursor: pointer;
+    background: url("http://starlight.vn/content/img/seat-vip.png") !important;
+    background-size: contain !important;
+}

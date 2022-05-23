@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcinema=self.webpackChunkcinema||[]).push([[989],{7989:function(e,n,t){t.r(n);var r=t(1413),c=t(5987),s=t(8742),a=t(8114),o=t(2193),u=t(766),i=t(184),l=["Component"];n.default=function(e){if(!localStorage.getItem(u.bc))return(0,i.jsx)(s.l_,{to:"/cinema-reactjs/login"});var n=e.Component,t=(0,c.Z)(e,l);return(0,i.jsx)(s.AW,(0,r.Z)((0,r.Z)({},t),{},{render:function(e){return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(o.Z,{}),(0,i.jsx)(n,(0,r.Z)({},e)),(0,i.jsx)(a.Z,{})]})}}))}}}]);
-//# sourceMappingURL=989.2eefcfa3.chunk.js.map

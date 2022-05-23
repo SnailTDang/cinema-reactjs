@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cinema-reactjs/static/css/main.18a44f0e.css",
-    "main.js": "/cinema-reactjs/static/js/main.99dda94b.js",
-    "static/js/989.2eefcfa3.chunk.js": "/cinema-reactjs/static/js/989.2eefcfa3.chunk.js",
+    "main.css": "/cinema-reactjs/static/css/main.54b645bb.css",
+    "main.js": "/cinema-reactjs/static/js/main.6ee0fe69.js",
+    "static/js/989.02f6da84.chunk.js": "/cinema-reactjs/static/js/989.02f6da84.chunk.js",
     "static/js/787.fa79b8c8.chunk.js": "/cinema-reactjs/static/js/787.fa79b8c8.chunk.js",
     "index.html": "/cinema-reactjs/index.html",
-    "main.18a44f0e.css.map": "/cinema-reactjs/static/css/main.18a44f0e.css.map",
-    "main.99dda94b.js.map": "/cinema-reactjs/static/js/main.99dda94b.js.map",
-    "989.2eefcfa3.chunk.js.map": "/cinema-reactjs/static/js/989.2eefcfa3.chunk.js.map",
+    "main.54b645bb.css.map": "/cinema-reactjs/static/css/main.54b645bb.css.map",
+    "main.6ee0fe69.js.map": "/cinema-reactjs/static/js/main.6ee0fe69.js.map",
+    "989.02f6da84.chunk.js.map": "/cinema-reactjs/static/js/989.02f6da84.chunk.js.map",
     "787.fa79b8c8.chunk.js.map": "/cinema-reactjs/static/js/787.fa79b8c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18a44f0e.css",
-    "static/js/main.99dda94b.js"
+    "static/css/main.54b645bb.css",
+    "static/js/main.6ee0fe69.js"
   ]
 }

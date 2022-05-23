@@ -103,9 +103,3 @@ html {
     border: 2px solid #fff;
 }
 
-.screen-thumb img {
-    filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
-    -webkit-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
-    -moz-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
-}
-

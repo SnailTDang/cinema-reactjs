@@ -8,6 +8,7 @@ import { history } from '../../App';
 import style from "./Checkout.module.css"
 import "./checkout.css"
 import { TicketInfo } from '../../core/models/BookTicketsInfo';
+import { USER_LOGIN } from '../../ulti/constants/Settings';
 
 
 
@@ -44,10 +45,12 @@ export default function Checkout(props) {
             if (seat.daDat) {
                 seatType = 'seat-booked'
             }
-            // let seatSelect = '';
             let indexSelect = selectingSeats.findIndex(seactSl => seactSl.maGhe === seat.maGhe)
             if (indexSelect != -1) {
                 seatType = 'seat-booking'
+            }
+            if (seat.taiKhoanNguoiDat === JSON.parse(localStorage.getItem(USER_LOGIN)).taiKhoan) {
+                seat.stt = <i class="fa fa-user text-gray-300"></i>
             }
             return (
                 <Fragment key={index}>
@@ -96,7 +99,9 @@ export default function Checkout(props) {
                         <div className="px-10">
                             <div className="screen-thumb">
                                 <h4 className="text-orange-main text-3xl text-center">Màn hình</h4>
-                                <img src={"http://pixner.net/boleto/demo/assets/images/movie/screen-thumb.png"} alt="movie" className='w-full' />
+                                <img 
+                                src={"http://pixner.net/boleto/demo/assets/images/movie/screen-thumb.png"} 
+                                alt="movie" className='w-full' />
                             </div>
                             <div className="mt-12 text-center">
                                 {renderSeats()}
@@ -121,6 +126,12 @@ export default function Checkout(props) {
                                     <div className="text-center">
                                         <button className="seat seat-booked"></button>
                                         <p className="text-white text-lg">Sold Seat</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <button className="seat seat-booked">
+                                            <i class="fa fa-user text-gray-300"></i>
+                                        </button>
+                                        <p className="text-white text-lg">Your Seat</p>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +169,9 @@ export default function Checkout(props) {
                             <hr />
                             <div className="coupon py-2 text-white">
                                 <p className='mb-2 text-gray-300'>Coupons</p>
-                                <input type='text' placeholder='Enter coupons' className='mb-2 text-black p-2' />
+                                <input type='text'
+                                    placeholder='Enter coupons'
+                                    className='mb-2 text-black p-2' />
                             </div>
                             <div className="btn-checkout text-white">
                                 <button className="checkout p-3 bg-orange-main text-xl font-bold"

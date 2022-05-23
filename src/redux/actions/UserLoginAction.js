@@ -9,6 +9,7 @@ export const UserLoginAction = (user) => {
         let promise = userServices.postUserLogin(user)
         promise.then(result => {
             if (result.data.statusCode === 200) {
+
                 let action = {
                     type: USER_LOGIN,
                     value: result.data.content

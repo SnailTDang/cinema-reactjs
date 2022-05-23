@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { history } from '../../../../App'
-import { USER_LOGIN } from '../../../../ulti/constants/Settings'
+import { USER_LOGIN, TOKEN_CYBER } from '../../../../ulti/constants/Settings'
 
 
 const isActiveMenu = (isActive) => {
@@ -39,7 +39,9 @@ const renderUser = (user) => {
                 <button className="text-lg self-center font-semibold px-3 rounded hover:text-orange-main"
                     onClick={() => {
                         localStorage.removeItem(USER_LOGIN)
+                        localStorage.removeItem(TOKEN_CYBER)
                         history.push('/cinema-reactjs/')
+                        window.location.reload()
                     }}
                 >
                     Log Out
@@ -61,7 +63,7 @@ export default function Header(props) {
                     </a>
                     <ul className="items-stretch hidden space-x-3 lg:flex mb-0">
                         <li className="flex">
-                            <NavLink to="/cinema-reactjs/home" exact
+                            <NavLink to="/cinema-reactjs/" exact
                                 className={isActive => isActiveMenu(isActive)}
                             >HOME</NavLink>
                         </li>

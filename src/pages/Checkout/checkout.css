@@ -1,3 +1,9 @@
+.screen-thumb {
+    filter: drop-shadow(-3px 57px 40px rgb(255, 255, 255));
+    /* -webkit-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255));
+    -moz-filter: drop-shadow(-3px 57px 67px rgb(255, 255, 255)); */
+}
+
 .seat {
     margin: 3px;
     width: 35px;
@@ -25,5 +31,11 @@
 .seat-vip {
     cursor: pointer !important;
     background: url("http://starlight.vn/content/img/seat-vip.png") !important;
+    background-size: contain !important;
+}
+
+.your-seat {
+    cursor: not-allowed !important;
+    background: url("http://starlight.vn/content/img/seat-sw.png") !important;
     background-size: contain !important;
 }

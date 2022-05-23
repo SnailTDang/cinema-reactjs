@@ -10,7 +10,7 @@ export class BaseService {
             data: model,
             headers: {
                 'Authorization': 'Bearer ',
-                'TokenCybersoft': API_TOKEN
+                'TokenCybersoft': localStorage.getItem(API_TOKEN)
             }
         })
     }
@@ -22,7 +22,7 @@ export class BaseService {
             data: model,
             headers: {
                 'Authorization': 'Bearer ',
-                'TokenCybersoft': API_TOKEN
+                'TokenCybersoft': localStorage.getItem(API_TOKEN)
             }
         })
     }
@@ -34,7 +34,7 @@ export class BaseService {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ',
-                'TokenCybersoft': API_TOKEN
+                'TokenCybersoft': localStorage.getItem(API_TOKEN)
             }
         })
     }
@@ -45,7 +45,7 @@ export class BaseService {
             method: 'DELETE',
             headers: {
                 'Authorization': 'Bearer ',
-                'TokenCybersoft': API_TOKEN
+                'TokenCybersoft': localStorage.getItem(API_TOKEN)
             }
         })
     }

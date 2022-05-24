@@ -4,6 +4,7 @@ import ChecoutTickets from './CheckoutTickets/CheckoutTickets';
 import BookTickets from './BookTickets/BookTickets';
 import { useDispatch, useSelector } from 'react-redux';
 import { LEAVE_TAB } from '../../redux/types/TicketType';
+import LoadingMini from '../../components/Loadingmini/LoadingMini';
 
 
 const { TabPane } = Tabs;
@@ -16,6 +17,7 @@ export default function Checkout(props) {
     }, [])
     return (
         <>
+            <LoadingMini />
             <Tabs activeKey={tabDefault} defaultActiveKey="1" onChange={(key) => {
                 dispatch({ type: LEAVE_TAB, value: key })
             }}>

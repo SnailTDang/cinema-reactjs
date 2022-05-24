@@ -31,7 +31,6 @@ function App() {
     <div className="wrapper m-auto">
       <Router history={history}>
         <ScrollToTop />
-        <LoadingMini />
         <Switch>
           {/* <Suspense fallback={<Loading />}>
             <HomepageLazy exact path='/' Component={Home} />

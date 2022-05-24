@@ -2,6 +2,7 @@ import { userServices } from '../../services/UserServices'
 import { history } from '../../App'
 import { USER_LOGIN, USER_LOGIN_FAIL } from '../../ulti/constants/Settings'
 import { GET_TICKETS_USER_BOOK } from '../types/UserLoginType'
+import { showLoadingAction, hideLoadingAction } from './LoadingAction'
 
 
 
@@ -10,7 +11,6 @@ export const UserLoginAction = (user) => {
         let promise = userServices.postUserLogin(user)
         promise.then(result => {
             if (result.data.statusCode === 200) {
-
                 let action = {
                     type: USER_LOGIN,
                     value: result.data.content
@@ -33,18 +33,21 @@ export const UserLoginAction = (user) => {
 }
 
 export const GetTicketsUserAction = (token) => {
-    return dispatch => {
-        let promise = userServices.checkTicketsUser(token)
-        promise.then(result => {
+
+    return async dispatch => {
+        await dispatch(showLoadingAction)
+        try {
+            const result = await userServices.checkTicketsUser(token)
             let action = {
                 type: GET_TICKETS_USER_BOOK,
                 value: result.data.content
             }
             dispatch(action)
-            console.log(result.data.message)
-        })
-        promise.catch(error => {
+            await dispatch(hideLoadingAction)
+        }
+        catch (error) {
             console.log(error)
-        })
+            dispatch(hideLoadingAction)
+        }
     }
 }

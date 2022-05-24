@@ -28,7 +28,7 @@ export default function DeitailMovies(props) {
                         <Col xs={24} sm={12} md={12} lg={20}>
                             <div className="flex items-end">
                                 <div className="image-movie" style={{ flex: '0 0 30%' }}>
-                                    <img src={hinhAnh} alt="" className='h-400' />
+                                    <img src={hinhAnh} alt="" className='h-400 w-full' />
                                 </div>
                                 <div className="info-movie text-white ml-5">
                                     <p className='text-lg'>
@@ -86,7 +86,7 @@ export default function DeitailMovies(props) {
                                                             <p className='mb-0'>{cinema.diaChi}</p>
                                                         </div>
                                                     </div>
-                                                    <div className="grid grid-cols-9 gap-3 py-4">
+                                                    <div className="grid grid-cols-4 md:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-10 gap-3 py-4">
                                                         {cinema.lichChieuPhim?.map((shTimes, index) => {
                                                             return (
                                                                 <NavLink exact to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2'>

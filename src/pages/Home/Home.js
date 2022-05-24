@@ -13,8 +13,8 @@ const Home = (props) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(ListMoviesAction('GP02'))
-        dispatch(ListCinemaAction('GP02'))
+        dispatch(ListMoviesAction('GP03'))
+        dispatch(ListCinemaAction('GP03'))
     }, [])
 
 

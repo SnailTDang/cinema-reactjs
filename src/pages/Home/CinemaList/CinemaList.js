@@ -35,7 +35,7 @@ const renderCinemeList = (list) => {
                                             </div>
                                             <div className="ml-8">
                                                 <h1 className='text-xl font-bold text-orange-400'>{movies.tenPhim.toUpperCase()}</h1>
-                                                <div className="grid grid-cols-5 gap-3">
+                                                <div className="grid grid-cols-6 gap-3">
                                                     {movies.lstLichChieuTheoPhim?.slice(0, 10).map((shTimes, index) => {
                                                         return (
                                                             <Link to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 bg-btn-home text-white'>

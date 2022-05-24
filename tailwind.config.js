@@ -12,13 +12,22 @@ module.exports = {
 
       // default breakpoints but with 40px removed
       screens: {
-        "sm": '100%',
-        "md": '540px',
-        "lg": '720px',
-        "xl": '960px',
-        '2xl': '1200px',
+        "xs": "",
+        "sm": '540px',
+        "md": '	720px',
+        "lg": '960px',
+        "xl": '1140px',
+        '2xl': '1320px',
       },
     },
+    // screens: {
+    //   "xs": "",
+    //   "sm": '576px',
+    //   "md": '768px',
+    //   "lg": '720px',
+    //   "xl": '992px',
+    //   '2xl': '1400px',
+    // },
     extend: {
       fontFamily: {
         'sans': ['Saira Semi Condensed', 'sans-serif'],
@@ -28,12 +37,28 @@ module.exports = {
       maxHeight: {
         '450': '450px',
       },
+      minHeight: {
+        '60vh': '60vh',
+      },
+      maxWidth: {
+        '250': "250px",
+        '1/3': '33.333333%',
+        '1/2': '50%',
+        '1/4': '25%',
+        '3/5': '60%',
+        '2/5': '40%',
+        '3/4': '75%',
+      },
       height: {
         '385': '385px',
         '60vh': '60vh',
         '80vh': '80vh',
         '400': '400px',
         '300': '300px',
+        '350': "350px",
+      },
+      width: {
+        '250': "250px"
       },
       zIndex: {
         '10000': '10000',

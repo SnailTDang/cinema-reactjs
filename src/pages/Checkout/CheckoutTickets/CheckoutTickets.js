@@ -6,8 +6,9 @@ import { TicketRoomAction, BookTicketsAction } from "../../../redux/actions/Tick
 import { BOOK_TICKETS_HISTORY, LEAVE_TAB, POST_SELECT_SEAT } from "../../../redux/types/TicketType"
 import "./checkout.css"
 import { TicketInfo } from '../../../core/models/BookTicketsInfo';
-import { USER_LOGIN } from '../../../ulti/constants/Settings';
+import { USER_LOGIN, TOKEN_CYBER } from '../../../ulti/constants/Settings';
 import { hideLoadingAction, showLoadingAction } from '../../../redux/actions/LoadingAction';
+import { GetTicketsUserAction } from '../../../redux/actions/UserLoginAction';
 
 
 
@@ -23,8 +24,9 @@ export default function ChecoutTickets(props) {
         const id = props.match.params.id
         const action = TicketRoomAction(id)
         dispatch(action)
+        dispatch(GetTicketsUserAction(JSON.parse(localStorage.getItem(TOKEN_CYBER))))
     }, [])
-
+    console.log(danhSachGhe)
 
     const renderSeats = () => {
         return danhSachGhe?.map((seat, index) => {
@@ -82,11 +84,15 @@ export default function ChecoutTickets(props) {
     }
 
     const bookTickets = () => {
-        const bookTickets = new TicketInfo();
-        bookTickets.maLichChieu = props.match.params.id
-        bookTickets.danhSachVe = selectingSeats;
-        let action = BookTicketsAction(bookTickets)
-        dispatch(action)
+        if (selectingSeats.length > 0) {
+            const bookTickets = new TicketInfo();
+            bookTickets.maLichChieu = props.match.params.id
+            bookTickets.danhSachVe = selectingSeats;
+            let action = BookTicketsAction(bookTickets)
+            dispatch(action)
+        } else {
+            alert("PLEASE SELECT SEATS")
+        }
     }
     return (
         <div className="container">

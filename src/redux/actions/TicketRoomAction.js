@@ -2,6 +2,9 @@ import { GET_TICKET_ROOM, LEAVE_TAB } from '../types/TicketType'
 // import { ticketsServices } from '../../services/TicketsServices'
 import { ticketsServices } from '../../services/TicketsServices'
 import { hideLoadingAction, showLoadingAction } from './LoadingAction'
+import { GetTicketsUserAction } from './UserLoginAction'
+import { TOKEN_CYBER } from '../../ulti/constants/Settings'
+
 
 
 
@@ -24,14 +27,13 @@ export const TicketRoomAction = (roomID) => {
 export const BookTicketsAction = (ticketInfo) => {
     return async dispatch => {
         try {
-            dispatch(showLoadingAction)
             const result = await ticketsServices.postTicketMovie(ticketInfo)
-            console.log(result.data.content)
             await dispatch(TicketRoomAction(ticketInfo.maLichChieu))
-            await dispatch(hideLoadingAction)
+            await dispatch(GetTicketsUserAction(JSON.parse(localStorage.getItem(TOKEN_CYBER))))
             dispatch({ type: LEAVE_TAB, value: "2" })
         }
         catch (error) {
+            console.log(error)
             dispatch(hideLoadingAction)
         }
     }

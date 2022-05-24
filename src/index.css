@@ -51,6 +51,11 @@ html {
     backdrop-filter: blur(10px);
 }
 
+.backdrop-ticket {
+    background: #eadfd117;
+    backdrop-filter: blur(10px);
+}
+
 .ant-tabs-nav-wrap {
     justify-content: center;
     padding: 15px 0;
@@ -102,4 +107,3 @@ html {
     height: calc(100% - 4px);
     border: 2px solid #fff;
 }
-

@@ -26,7 +26,6 @@ export class TicketsServices extends BaseService {
     postTicketMovie = (ticketInfo = new TicketInfo()) => {
         return this.post(`api/QuanLyDatVe/DatVe`, ticketInfo)
     }
-
 }
 
 export const ticketsServices = new TicketsServices()

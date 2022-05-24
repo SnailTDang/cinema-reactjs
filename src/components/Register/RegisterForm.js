@@ -34,7 +34,7 @@ export default function RegisterForm(props) {
             email: '',
             number: '',
             fullname: '',
-            idGroup: 'GP01'
+            idGroup: 'GP04'
 
         },
         validationSchema: yup.object({
@@ -63,7 +63,7 @@ export default function RegisterForm(props) {
                 email: values.email,
                 matKhau: values.pass,
                 hoTen: values.fullname,
-                soDT: values.number,
+                soDt: values.number,
                 maNhom: values.idGroup
             }
             const action = UserSignInAction(user)

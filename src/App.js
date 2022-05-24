@@ -12,12 +12,14 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import News from './pages/News/News';
 import DeitailMovies from './pages/Detail/DeitailMovies';
-import Checkout from './pages/Checkout/Checkout'
 import Loading from './components/Loading/Loading';
 import { lazy, Suspense } from 'react';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Checkout from './pages/Checkout/Checkout';
+import LoadingMini from './components/Loadingmini/LoadingMini';
+
 
 
 
@@ -34,8 +36,8 @@ function App() {
     <div className="wrapper m-auto">
       <Router history={history}>
         <ScrollToTop />
+        <LoadingMini />
         <Switch>
-
           {/* <Suspense fallback={<Loading />}>
             <HomepageLazy exact path='/' Component={Home} />
           </Suspense> */}

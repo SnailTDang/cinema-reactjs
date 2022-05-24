@@ -37,5 +37,8 @@
 .your-seat {
     cursor: not-allowed !important;
     background: url("http://starlight.vn/content/img/seat-sw.png") !important;
+    filter: hue-rotate(63deg) saturate(200%);
+    -webkit-filter: hue-rotate(63deg) saturate(200%);
+    -moz-filter: hue-rotate(63deg) saturate(200%);
     background-size: contain !important;
 }

@@ -1,6 +1,7 @@
 import { userServices } from '../../services/UserServices'
-import { USER_LOGIN, USER_LOGIN_FAIL } from '../../ulti/constants/Settings'
 import { history } from '../../App'
+import { USER_LOGIN, USER_LOGIN_FAIL } from '../../ulti/constants/Settings'
+import { GET_TICKETS_USER_BOOK } from '../types/UserLoginType'
 
 
 
@@ -27,6 +28,23 @@ export const UserLoginAction = (user) => {
                 console.log(action)
                 dispatch(action)
             }
+        })
+    }
+}
+
+export const GetTicketsUserAction = (token) => {
+    return dispatch => {
+        let promise = userServices.checkTicketsUser(token)
+        promise.then(result => {
+            let action = {
+                type: GET_TICKETS_USER_BOOK,
+                value: result.data.content
+            }
+            dispatch(action)
+            console.log(result.data.message)
+        })
+        promise.catch(error => {
+            console.log(error)
         })
     }
 }

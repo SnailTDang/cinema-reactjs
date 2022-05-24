@@ -1,15 +1,17 @@
-import { GET_TICKET_ROOM, POST_SELECT_SEAT } from "../types/TicketType"
+import { BOOK_TICKETS_MOVIE, GET_TICKET_ROOM, POST_SELECT_SEAT } from "../types/TicketType"
 
 const initialState = {
     roomTickets: {},
     selectingSeats: []
 }
 
+
 export const TicketsRoomReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_TICKET_ROOM:
+            state.selectingSeats = []
             state.roomTickets = action.value
-            console.log(state.roomTickets, action)
+            console.log(state.selectingSeats)
             return { ...state }
         case POST_SELECT_SEAT:
             let selectSeatUppdate = [...state.selectingSeats]

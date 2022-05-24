@@ -1,8 +1,10 @@
-import { BOOK_TICKETS_MOVIE, GET_TICKET_ROOM, POST_SELECT_SEAT } from "../types/TicketType"
+import { GET_TICKET_ROOM, LEAVE_TAB, POST_SELECT_SEAT } from "../types/TicketType"
+
 
 const initialState = {
     roomTickets: {},
-    selectingSeats: []
+    selectingSeats: [],
+    tabDefault: "1"
 }
 
 
@@ -24,6 +26,10 @@ export const TicketsRoomReducer = (state = initialState, action) => {
                 selectSeatUppdate.push(action.value)
             }
             return { ...state, selectingSeats: selectSeatUppdate }
+        case LEAVE_TAB:
+            state.tabDefault = action.value
+            console.log(state.tabDefault)
+            return { ...state }
         default:
             return state
     }

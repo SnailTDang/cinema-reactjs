@@ -1,3 +1,4 @@
 export const GET_TICKET_ROOM = "GET_TICKET_ROOM"
 export const POST_SELECT_SEAT = "POST_SELECT_SEAT"
 export const BOOK_TICKETS_MOVIE = "BOOK_TICKETS_MOVIE"
+export const LEAVE_TAB = "LEAVE_TAB"

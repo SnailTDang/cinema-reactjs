@@ -13,7 +13,7 @@ export class TicketsServices extends BaseService {
                 data: model,
                 headers: {
                     'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem(TOKEN_CYBER)),
-                    'TokenCybersoft': localStorage.getItem(API_TOKEN)
+                    'TokenCybersoft': API_TOKEN
                 }
             })
         }

@@ -21,7 +21,7 @@ export class UserServices extends BaseService {
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem(TOKEN_CYBER)),
-                'TokenCybersoft': localStorage.getItem(API_TOKEN)
+                'TokenCybersoft': API_TOKEN
             }
         })
     }

@@ -21,11 +21,6 @@ import Checkout from './pages/Checkout/Checkout';
 import LoadingMini from './components/Loadingmini/LoadingMini';
 
 
-
-
-
-
-
 const CheckoutTemplateLazy = lazy(() => import('./templates/CheckoutTemplate/CheckoutTemplate'))
 const HomepageLazy = lazy(() => import('./templates/HomeTemplates/HomeTemplate'))
 

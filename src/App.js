@@ -19,6 +19,9 @@ import Register from './pages/Register/Register'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Checkout from './pages/Checkout/Checkout';
 import LoadingMini from './components/Loadingmini/LoadingMini';
+import NewsTemplate from './templates/NewsTemplate/NewsTemplate';
+import ShowtimesTemplate from './templates/ShowtimesTemplate/ShowtimesTemplate';
+import Showtimes from './pages/Showtimes/Showtimes';
 
 
 const CheckoutTemplateLazy = lazy(() => import('./templates/CheckoutTemplate/CheckoutTemplate'))
@@ -37,8 +40,9 @@ function App() {
           </Suspense> */}
           <HomeTemplate exact path='/' Component={Home} />
           <HomeTemplate exact path='/home' Component={Home} />
+          <ShowtimesTemplate exact path='/showtimes' Component={Showtimes} />
           <ContactTemplate exact path='/contact' Component={Contact} />
-          <HomeTemplate exact path='/news' Component={News} />
+          <NewsTemplate exact path='/news' Component={News} />
           <LoginTemplate exact path='/login' Component={Login} />
           <SignUpTemplate exact path='/register' Component={Register} />
           <DetailTemplate exact path='/movie/:id' Component={DeitailMovies} />

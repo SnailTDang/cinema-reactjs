@@ -1,0 +1,38 @@
+.ant-tabs-nav-wrap {
+    justify-content: center;
+    padding: 15px 0;
+    /* height: 140px; */
+}
+.ant-tabs-ink-bar {
+    background-color: transparent !important;
+}
+
+.ant-tabs-tab {
+    /* transition: all 0.3s ease-in; */
+}
+
+.ant-tabs-tab > #rc-tabs-0-tab-0 img,
+.ant-tabs-tab > #rc-tabs-0-tab-1 img,
+.ant-tabs-tab > #rc-tabs-0-tab-2 img,
+.ant-tabs-tab > #rc-tabs-0-tab-3 img,
+.ant-tabs-tab > #rc-tabs-0-tab-4 img,
+.ant-tabs-tab > #rc-tabs-0-tab-5 img {
+    opacity: 0.5;
+    transition: all 0.3s ease-in;
+}
+
+.ant-tabs-tab-active p:first-child {
+    color: #ff5400;
+}
+
+.ant-tabs-tab-active > #rc-tabs-0-tab-0 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-1 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-2 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-3 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-4 img,
+.ant-tabs-tab-active > #rc-tabs-0-tab-5 img {
+    opacity: 1;
+    border-radius: 50%;
+    /* border: 10px solid #ff5400; */
+    transform: scale(1.3);
+}

@@ -5,6 +5,7 @@ import BookTickets from './BookTickets/BookTickets';
 import { useDispatch, useSelector } from 'react-redux';
 import { LEAVE_TAB } from '../../redux/types/TicketType';
 import LoadingMini from '../../components/Loadingmini/LoadingMini';
+import './checkout.css'
 
 
 const { TabPane } = Tabs;
@@ -21,10 +22,10 @@ export default function Checkout(props) {
             <Tabs activeKey={tabDefault} defaultActiveKey="1" onChange={(key) => {
                 dispatch({ type: LEAVE_TAB, value: key })
             }}>
-                <TabPane tab="Đặt vé" key="1">
+                <TabPane tab={<h3 className='text-xl text-white p-3'>BOOK TICKETS</h3>} key="1">
                     <ChecoutTickets {...props} />
                 </TabPane>
-                <TabPane tab="Thông tin đặt vé" key="2">
+                <TabPane tab={<h3 className='text-xl text-white p-3'>HISTORY BOOKING</h3>} key="2">
                     <BookTickets />
                 </TabPane>
             </Tabs>

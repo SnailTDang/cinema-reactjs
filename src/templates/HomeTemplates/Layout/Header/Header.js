@@ -68,12 +68,12 @@ export default function Header(props) {
                             >HOME</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink exact to="/home/#showtimes-cinema" className="nav-link flex items-center px-4 -mb-1 text-white text-lg unselected font-semibold hover:text-orange-main">SHOWTIMES</NavLink>
+                            <NavLink exact to="/showtimes" className={isActive => isActiveMenu(isActive)}>SHOWTIMES</NavLink>
                         </li>
                         <li className="flex">
                             <NavLink to="/news" exact
                                 className={isActive => isActiveMenu(isActive)}
-                            >NEWS</NavLink>
+                            >PROMOTIONS</NavLink>
                         </li>
                         <li className="flex">
                             <NavLink to="/contact" exact

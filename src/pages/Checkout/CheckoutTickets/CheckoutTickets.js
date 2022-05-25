@@ -1,13 +1,12 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { Row, Col, Tabs } from 'antd';
+import React, { Fragment, useEffect } from 'react'
+import { Row, Col } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { TicketRoomAction, BookTicketsAction } from "../../../redux/actions/TicketRoomAction"
-import { BOOK_TICKETS_HISTORY, LEAVE_TAB, POST_SELECT_SEAT } from "../../../redux/types/TicketType"
-import "./checkout.css"
+import { POST_SELECT_SEAT } from "../../../redux/types/TicketType"
+import "./bookticket.css"
 import { TicketInfo } from '../../../core/models/BookTicketsInfo';
 import { USER_LOGIN, TOKEN_CYBER } from '../../../ulti/constants/Settings';
-import { hideLoadingAction, showLoadingAction } from '../../../redux/actions/LoadingAction';
 import { GetTicketsUserAction } from '../../../redux/actions/UserLoginAction';
 
 

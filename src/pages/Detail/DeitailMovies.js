@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ShowtimesAction } from '../../redux/actions/ShowtimesAction';
 import moment from 'moment';
 import { NavLink } from 'react-router-dom';
+import { showTrailerAction } from '../../redux/actions/TrailerAction';
 
 const { TabPane } = Tabs;
 
@@ -12,12 +13,11 @@ const { TabPane } = Tabs;
 export default function DeitailMovies(props) {
     const { showTimeMovie } = useSelector(state => state.ShowtimesReducer)
     let { danhGia, heThongRapChieu, hinhAnh, moTa, ngayKhoiChieu, tenPhim, trailer } = showTimeMovie
-
-    const ditpatch = useDispatch()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let id = props.match.params.id;
-        ditpatch(ShowtimesAction(id))
+        dispatch(ShowtimesAction(id))
     }, [])
 
     return (
@@ -30,7 +30,7 @@ export default function DeitailMovies(props) {
                                 <div className="image-movie" style={{ flex: '0 0 30%' }}>
                                     <img src={hinhAnh} alt="" className='h-400 w-full' />
                                 </div>
-                                <div className="info-movie text-white ml-5">
+                                <div className="info-movie text-white ml-5 py-5">
                                     <p className='text-lg'>
                                         <span className='text-orange-main font-bold'>Ngày công chiếu: </span>
                                         {moment(ngayKhoiChieu).format("DD/MM/YYYY")}
@@ -51,6 +51,15 @@ export default function DeitailMovies(props) {
                                     <p className='text-base mb-2'>
                                         <span className='text-orange-main font-bold'>Chi tiết: </span>
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero non ad eum velit distinctio iusto dolorem eaque obcaecati eveniet aliquam dolore ab optio veritatis incidunt, architecto.</p>
+                                    <div className="trailer">
+                                        <button className="inline-flex items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg border-orange-600 border-2 bg-orange-500 text-white"
+                                            onClick={() => {
+                                                dispatch(showTrailerAction(showTimeMovie))
+                                            }}
+                                        >
+                                            TRAILER
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </Col>

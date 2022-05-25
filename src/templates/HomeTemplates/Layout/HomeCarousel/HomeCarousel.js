@@ -13,6 +13,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import '../HomeCarousel/swiper.css'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -21,10 +22,22 @@ export default function HomeCarousel() {
     const { bannerList } = useSelector(state => state.BannerReducer);
     const dispatch = useDispatch()
     useEffect(() => {
-        const action = BannerAction('GP04')
+        const action = BannerAction('GP03')
         dispatch(action)
     }, [])
     const renderBanner = () => {
+        return bannerList.map(item => {
+            return (
+                <SwiperSlide key={item.maPhim} >
+                    <NavLink exact to={`/movie/${item.maPhim}`} className='w-full max-h-450 object-cover' >
+                        <img src={item.hinhAnh} alt="" className='w-full max-h-450 object-cover' />
+                    </NavLink>
+                </SwiperSlide>
+            )
+
+        })
+    }
+    const renderThumbBanner = () => {
         return bannerList.map(item => {
             return (
                 <SwiperSlide key={item.maPhim} >
@@ -61,7 +74,7 @@ export default function HomeCarousel() {
                 modules={[Navigation, Thumbs]}
                 className="mySwiper"
             >
-                {renderBanner()}
+                {renderThumbBanner()}
             </Swiper>
         </div>
     )

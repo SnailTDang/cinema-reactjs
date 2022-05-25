@@ -74,9 +74,6 @@ export default function BookTickets() {
         <>
             <section className="container text-gray-400 body-font">
                 <div className="px-5 py-5 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-10">
-                        <h1 className="sm:text-3xl text-2xl font-bold mb-4 text-white">HISTORY BOOKING</h1>
-                    </div>
                     <div className="flex flex-row flex-wrap -m-2 min-h-60vh">
                         {/* <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
                             <div className="h-full flex items-center border-gray-800 border p-4 rounded-lg">

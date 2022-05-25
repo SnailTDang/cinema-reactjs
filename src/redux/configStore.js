@@ -7,6 +7,8 @@ import { ShowtimesReducer } from './reducers/ShowtimesReducer';
 import { UserLoginReducer } from './reducers/UserLoginReducer';
 import { TicketsRoomReducer } from './reducers/TicketRoomReducer';
 import { LoadingReducer } from './reducers/LoadingReducer';
+import { TrailerReducer } from './reducers/TrailerReducer';
+
 
 
 
@@ -21,6 +23,7 @@ const rootReducer = combineReducers({
     UserLoginReducer,
     TicketsRoomReducer,
     LoadingReducer,
+    TrailerReducer,
 })
 
 export const store = createStore(rootReducer, applyMiddleware(thunk))

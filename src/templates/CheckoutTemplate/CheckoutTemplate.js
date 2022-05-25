@@ -24,7 +24,7 @@ const CheckoutTemplate = (props) => {
                         : `Are you sure you want to go to ${location.pathname}?`
                 }}
             />
-            {/* <Header /> */}
+            <Header />
             <Component {...propsRoute} />
             <Footer />
         </>

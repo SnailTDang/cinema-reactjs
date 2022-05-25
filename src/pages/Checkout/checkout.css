@@ -1,0 +1,20 @@
+.ant-tabs-nav-wrap {
+    /* justify-content: flex-start; */
+    padding: 15px 0;
+    /* height: 140px; */
+}
+.ant-tabs-ink-bar {
+    background-color: transparent !important;
+}
+
+.ant-tabs-tab {
+    /* transition: all 0.3s ease-in; */
+}
+
+.ant-tabs-tab-active h3 {
+    background-color: #ff5400;
+}
+
+.ant-tabs-tab-active h3 {
+    background-color: #ff5400;
+}

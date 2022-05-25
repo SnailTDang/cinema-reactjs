@@ -1,0 +1,21 @@
+.ant-modal-content {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.ant-modal-close-x {
+    display: none !important;
+}
+
+.ant-modal-footer {
+    display: none !important;
+}
+
+.ant-modal-mask {
+    z-index: 100001 !important;
+    background-color: rgba(0, 0, 0, 0.805) !important;
+}
+
+.ant-modal-wrap {
+    z-index: 100005 !important;
+}

@@ -1,0 +1,48 @@
+#news .bg_hover {
+    display: none;
+    background-color: rgba(255, 84, 0, 0.8);
+    background-size: 100% auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-decoration: none;
+}
+
+#news .news-item:hover .bg_hover {
+    display: block;
+}
+
+.news-item {
+    position: relative;
+    padding: 15px;
+}
+
+#news .word-wrap h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    line-height: 1.2;
+    font-size: 24px;
+    color: #ffffff;
+    height: 62%;
+}
+
+#news .detail-btn {
+    border-radius: 25px;
+    border: 1.5px solid #ffffff;
+    font-weight: bold;
+    padding: 10px 23px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    width: 113px;
+    margin: 0 auto;
+}

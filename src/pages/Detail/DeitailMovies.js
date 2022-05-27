@@ -22,7 +22,7 @@ export default function DeitailMovies(props) {
 
     return (
         <div style={{ backgroundImage: `url(${hinhAnh})`, backgroundSize: 'cover', backgroundPosition: 'top center', backgroundAttachment: "fixed" }}>
-            <div className="backdrop">
+            <div className="backdrop-detail">
                 <div className="container py-10">
                     <Row className='backdrop-info'>
                         <Col xs={24} sm={12} md={12} lg={20}>
@@ -66,7 +66,7 @@ export default function DeitailMovies(props) {
                         <Col xs={24} sm={12} md={12} lg={4} >
                             <div className="flex items-end h-full justify-center">
                                 <div className="rating">
-                                    <h3 className='text-center text-2xl font-bold text-orange-main'>Đánh giá</h3>
+                                    <h3 className='text-center text-2xl font-bold text-orange-main'>Rating</h3>
                                     <div className={`c100 p${Math.floor(danhGia * 10, 1)} orange`}>
                                         <span>{danhGia}/10</span>
                                         <div className="slice">
@@ -91,14 +91,14 @@ export default function DeitailMovies(props) {
                                                     <div className='flex flex-row' >
                                                         <img src={cinema.hinhAnh} alt="" className='w-20' />
                                                         <div className='ml-5 flex flex-col justify-end'>
-                                                            <h1 className='text-xl font-bold mb-2'>{cinema.tenCumRap}</h1>
+                                                            <h1 className='text-xl font-bold mb-2 text-orange-main'>{cinema.tenCumRap}</h1>
                                                             <p className='mb-0'>{cinema.diaChi}</p>
                                                         </div>
                                                     </div>
-                                                    <div className="grid grid-cols-4 md:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-10 gap-3 py-4">
+                                                    <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10 gap-3 py-4">
                                                         {cinema.lichChieuPhim?.map((shTimes, index) => {
                                                             return (
-                                                                <NavLink exact to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2'>
+                                                                <NavLink exact to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2 border-orange-main bg-yellow-200'>
                                                                     {moment(shTimes.ngayChieuGioChieu).format('hh:mm A')}
                                                                 </NavLink>
                                                             )

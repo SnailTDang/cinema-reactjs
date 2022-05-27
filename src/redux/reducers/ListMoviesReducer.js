@@ -17,7 +17,7 @@ export const ListMoviesReducer = (state = initialState, action) => {
             })
             state.moviesList.showing = true
             state.moviesList.coming = false
-            console.log(state)
+            // console.log(state)
             return { ...state }
         case GET_MOVIES_SHOWING:
             state.moviesList.arrayMovieDefault = state.moviesList.arrayMovie.filter(item => {
@@ -25,7 +25,7 @@ export const ListMoviesReducer = (state = initialState, action) => {
             })
             state.moviesList.coming = false
             state.moviesList.showing = true
-            console.log(state)
+            // console.log(state)
             return { ...state }
         case GET_MOVIES_COMING:
             state.moviesList.arrayMovieDefault = state.moviesList.arrayMovie.filter(item => {
@@ -33,7 +33,7 @@ export const ListMoviesReducer = (state = initialState, action) => {
             })
             state.moviesList.showing = false
             state.moviesList.coming = true
-            console.log(state)
+            // console.log(state)
             return { ...state }
         default:
             return state

@@ -33,6 +33,20 @@ export default function MovieSwiper(props) {
             }}
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
+            breakpoints={{
+                360: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1140: {
+                    slidesPerView: 4,
+                }
+            }}
             className="movies-swiper"
         >
             {renderListMovies(props.moviesList)}

@@ -4,7 +4,7 @@ import "./loadingmini.css"
 
 export default function LoadingMini() {
     const { isLoading } = useSelector(state => state.LoadingReducer)
-    console.log(isLoading)
+    // console.log(isLoading)
     return (
         <>
             {isLoading ?

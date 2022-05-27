@@ -13,13 +13,13 @@ const HomeMenu = (props) => {
         <div className="bg-[url('https://metiz.vn/static/assets/websites/images/bg-session-movie.png')] py-10">
             <div className="container mx-auto">
                 <div className="flex justify-center py-5">
-                    <button type="button" className={`${activeButtonShowing} text-lg text-white border-white border-2 px-8 py-3 font-semibold rounded-full hover:bg-orange-main mr-4`} onClick={() => {
+                    <button type="button" className={`${activeButtonShowing} text-xl text-white border-white border-2 px-8 py-3 font-semibold rounded-full hover:bg-orange-main mr-4`} onClick={() => {
                         const action = {
                             type: GET_MOVIES_SHOWING,
                         }
                         dispatch(action)
                     }}>SHOWING MOVIES</button>
-                    <button type="button" className={`${activeButtonComing} text-lg text-white border-white border-2 px-8 py-3 font-semibold rounded-full hover:bg-orange-main`} onClick={() => {
+                    <button type="button" className={`${activeButtonComing} text-xl text-white border-white border-2 px-8 py-3 font-semibold rounded-full hover:bg-orange-main`} onClick={() => {
                         const action = {
                             type: GET_MOVIES_COMING,
                         }

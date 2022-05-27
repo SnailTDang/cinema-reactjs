@@ -7,6 +7,7 @@ import { UserLoginAction } from '../../redux/actions/UserLoginAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { UserSignInAction } from '../../redux/actions/UserSignInAction';
 import { NavLink } from 'react-router-dom';
+import { Col, Row } from 'antd';
 
 
 
@@ -94,137 +95,139 @@ export default function RegisterForm(props) {
     return (
         <div className="limiter">
             <div className="container-login100">
-                <div className="wrap-login100">
-                    <form className="login100-form validate-form" onSubmit={formik.handleSubmit}>
-                        <h1 className="login100-form-title p-4 font-bold text-orange-main">
-                            SIGN UP NEW MEMBER
-                        </h1>
-                        <div className="mb-5">
-                            <div className="wrap-input100 validate-input" data-validate="Valid account is required: ex@abc.xyz">
-                                <input className={`input100 ${focus.account === true ? 'has-val' : ''}`} type="text" name="account"
-                                    onChange={(e) => {
-                                        formik.handleChange(e)
-                                        hanldeInput(e)
-                                    }}
-                                    value={formik.values.account}
-                                    onBlur={(e) => {
-                                        formik.handleBlur(e)
-                                    }} />
+                <Row className="wrap-login100">
+                    <Col lg={10} sm={24} xs={24}>
+                        <form className="login100-form validate-form w-full" onSubmit={formik.handleSubmit}>
+                            <h1 className="login100-form-title p-4 font-bold text-orange-main">
+                                SIGN UP NEW MEMBER
+                            </h1>
+                            <div className="mb-5">
+                                <div className="wrap-input100 validate-input" data-validate="Valid account is required: ex@abc.xyz">
+                                    <input className={`input100 ${focus.account === true ? 'has-val' : ''}`} type="text" name="account"
+                                        onChange={(e) => {
+                                            formik.handleChange(e)
+                                            hanldeInput(e)
+                                        }}
+                                        value={formik.values.account}
+                                        onBlur={(e) => {
+                                            formik.handleBlur(e)
+                                        }} />
 
-                                <span className="focus-input100" />
-                                <span className="label-input100">Account</span>
+                                    <span className="focus-input100" />
+                                    <span className="label-input100">Account</span>
+                                </div>
+                                {formik.touched.account && formik.errors.account ? (
+                                    <div className='pt-2 text-red-600'>{formik.errors.account}</div>
+                                ) : null}
                             </div>
-                            {formik.touched.account && formik.errors.account ? (
-                                <div className='pt-2 text-red-600'>{formik.errors.account}</div>
-                            ) : null}
-                        </div>
-                        <div className="mt-6">
-                            <div className="wrap-input100 validate-input" data-validate="Name is required">
-                                <input className={`input100 ${focus.fullname === true ? 'has-val' : ''}`} type="text" name="fullname"
-                                    onChange={(e) => {
-                                        formik.handleChange(e)
-                                        hanldeInput(e)
-                                    }}
-                                    value={formik.values.fullname}
-                                    onBlur={(e) => {
-                                        formik.handleBlur(e)
-                                    }} />
-                                <span className="focus-input100" />
-                                <span className="label-input100">Fullname</span>
+                            <div className="mt-6">
+                                <div className="wrap-input100 validate-input" data-validate="Name is required">
+                                    <input className={`input100 ${focus.fullname === true ? 'has-val' : ''}`} type="text" name="fullname"
+                                        onChange={(e) => {
+                                            formik.handleChange(e)
+                                            hanldeInput(e)
+                                        }}
+                                        value={formik.values.fullname}
+                                        onBlur={(e) => {
+                                            formik.handleBlur(e)
+                                        }} />
+                                    <span className="focus-input100" />
+                                    <span className="label-input100">Fullname</span>
+                                </div>
+                                {formik.touched.fullname && formik.errors.fullname ? (
+                                    <div className='pt-2 text-red-600'>{formik.errors.fullname}</div>
+                                ) : null}
                             </div>
-                            {formik.touched.fullname && formik.errors.fullname ? (
-                                <div className='pt-2 text-red-600'>{formik.errors.fullname}</div>
-                            ) : null}
-                        </div>
-                        <div className="mt-6">
-                            <div className="wrap-input100 validate-input" data-validate="Email is required">
-                                <input className={`input100 ${focus.email === true ? 'has-val' : ''}`} type="email" name="email"
-                                    onChange={(e) => {
-                                        formik.handleChange(e)
-                                        hanldeInput(e)
-                                    }}
-                                    value={formik.values.email}
-                                    onBlur={(e) => {
-                                        formik.handleBlur(e)
-                                    }} />
-                                <span className="focus-input100" />
-                                <span className="label-input100">Email</span>
+                            <div className="mt-6">
+                                <div className="wrap-input100 validate-input" data-validate="Email is required">
+                                    <input className={`input100 ${focus.email === true ? 'has-val' : ''}`} type="email" name="email"
+                                        onChange={(e) => {
+                                            formik.handleChange(e)
+                                            hanldeInput(e)
+                                        }}
+                                        value={formik.values.email}
+                                        onBlur={(e) => {
+                                            formik.handleBlur(e)
+                                        }} />
+                                    <span className="focus-input100" />
+                                    <span className="label-input100">Email</span>
+                                </div>
+                                {formik.touched.email && formik.errors.email ? (
+                                    <div className='pt-2 text-red-600'>{formik.errors.email}</div>
+                                ) : null}
                             </div>
-                            {formik.touched.email && formik.errors.email ? (
-                                <div className='pt-2 text-red-600'>{formik.errors.email}</div>
-                            ) : null}
-                        </div>
-                        <div className="mt-6">
-                            <div className="wrap-input100 validate-input" data-validate="Password is required">
-                                <input className={`input100 ${focus.pass === true ? 'has-val' : ''}`} type="password" name="pass"
-                                    onChange={(e) => {
-                                        formik.handleChange(e)
-                                        hanldeInput(e)
-                                    }}
-                                    value={formik.values.pass}
-                                    onBlur={(e) => {
-                                        formik.handleBlur(e)
-                                    }} />
-                                <span className="focus-input100" />
-                                <span className="label-input100">Password</span>
+                            <div className="mt-6">
+                                <div className="wrap-input100 validate-input" data-validate="Password is required">
+                                    <input className={`input100 ${focus.pass === true ? 'has-val' : ''}`} type="password" name="pass"
+                                        onChange={(e) => {
+                                            formik.handleChange(e)
+                                            hanldeInput(e)
+                                        }}
+                                        value={formik.values.pass}
+                                        onBlur={(e) => {
+                                            formik.handleBlur(e)
+                                        }} />
+                                    <span className="focus-input100" />
+                                    <span className="label-input100">Password</span>
+                                </div>
+                                {formik.touched.pass && formik.errors.pass ? (
+                                    <div className='pt-2 text-red-600'>{formik.errors.pass}</div>
+                                ) : null}
                             </div>
-                            {formik.touched.pass && formik.errors.pass ? (
-                                <div className='pt-2 text-red-600'>{formik.errors.pass}</div>
-                            ) : null}
-                        </div>
-                        <div className="mt-6">
-                            <div className="wrap-input100 validate-input" data-validate="Phone number is required">
-                                <input className={`input100 ${focus.number === true ? 'has-val' : ''}`} type="text" name="number"
-                                    onChange={(e) => {
-                                        formik.handleChange(e)
-                                        hanldeInput(e)
-                                    }}
-                                    value={formik.values.number}
-                                    onBlur={(e) => {
-                                        formik.handleBlur(e)
-                                    }} />
-                                <span className="focus-input100" />
-                                <span className="label-input100">Number Phone</span>
+                            <div className="mt-6">
+                                <div className="wrap-input100 validate-input" data-validate="Phone number is required">
+                                    <input className={`input100 ${focus.number === true ? 'has-val' : ''}`} type="text" name="number"
+                                        onChange={(e) => {
+                                            formik.handleChange(e)
+                                            hanldeInput(e)
+                                        }}
+                                        value={formik.values.number}
+                                        onBlur={(e) => {
+                                            formik.handleBlur(e)
+                                        }} />
+                                    <span className="focus-input100" />
+                                    <span className="label-input100">Number Phone</span>
+                                </div>
+                                {formik.touched.number && formik.errors.number ? (
+                                    <div className='pt-2 text-red-600'>{formik.errors.number}</div>
+                                ) : null}
                             </div>
-                            {formik.touched.number && formik.errors.number ? (
-                                <div className='pt-2 text-red-600'>{formik.errors.number}</div>
-                            ) : null}
-                        </div>
-                        <div className="flex-sb-m w-full pt-3" >
-                            <div>
-                                <span className='text-red-600'>{signinfail}</span>
+                            <div className="flex-sb-m w-full pt-3" >
+                                <div>
+                                    <span className='text-red-600'>{signinfail}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex-sb-m w-full pt-3 pb-2">
-                            <div>
-                                <NavLink to="/login" className="txt1">
-                                    Have an Account?
-                                </NavLink>
+                            <div className="flex-sb-m w-full pt-3 pb-2">
+                                <div>
+                                    <NavLink to="/login" className="txt1">
+                                        Have an Account?
+                                    </NavLink>
+                                </div>
                             </div>
-                        </div>
-                        <div className="container-login100-form-btn">
-                            <button className="login100-form-btn font-bold text-2xl text-orange-main border-2 border-orange-main hover:bg-orange-main hover:text-white" type='submit'>
-                                SIGN UP
-                            </button>
-                        </div>
-                        <div className="text-center pt-4 pb-4">
-                            <span className="txt2">
-                                or sign up using
-                            </span>
-                        </div>
-                        <div className="login100-form-social flex gap-2 justify-center">
-                            <a href="#" className="login100-form-social-item flex bg1 m-r-5 items-center justify-center">
-                                <i className="fab fa-facebook-f" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" className="login100-form-social-item flex bg2 m-r-5 items-center justify-center">
-                                <i className="fab fa-twitter" aria-hidden="true" />
-                            </a>
-                        </div>
-                    </form>
-                    <div className="login100-more">
+                            <div className="container-login100-form-btn">
+                                <button className="login100-form-btn font-bold text-2xl text-orange-main border-2 border-orange-main hover:bg-orange-main hover:text-white" type='submit'>
+                                    SIGN UP
+                                </button>
+                            </div>
+                            <div className="text-center pt-4 pb-4">
+                                <span className="txt2">
+                                    or sign up using
+                                </span>
+                            </div>
+                            <div className="login100-form-social flex gap-2 justify-center">
+                                <a href="#" className="login100-form-social-item flex bg1 m-r-5 items-center justify-center">
+                                    <i className="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" className="login100-form-social-item flex bg2 m-r-5 items-center justify-center">
+                                    <i className="fab fa-twitter" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </form>
+                    </Col>
+                    <Col lg={14} md={24} xs={24}>
                         <img src="http://starlight.vn/Areas/Admin/Content/Fileuploads/images/POSTER/th%E1%BB%A9%202(1).jpg" alt="" className=' h-full w-full' />
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
         </div>
 

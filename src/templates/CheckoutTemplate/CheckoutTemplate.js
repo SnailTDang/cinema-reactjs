@@ -21,7 +21,7 @@ const CheckoutTemplate = (props) => {
 
                     return location.pathname.startsWith("/app")
                         ? true
-                        : `Are you sure you want to go to ${location.pathname}?`
+                        : `Are you sure you want to leave without checkout?`
                 }}
             />
             <Header />

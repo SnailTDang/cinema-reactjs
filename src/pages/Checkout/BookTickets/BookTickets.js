@@ -9,12 +9,12 @@ import { TOKEN_CYBER } from '../../../ulti/constants/Settings'
 
 export default function BookTickets() {
     const { userInfo } = useSelector(state => state.UserLoginReducer)
-    console.log(userInfo)
+    // console.log(userInfo)
     const dispatch = useDispatch()
     useEffect(() => {
         // dispatch(GetTicketsUserAction(JSON.parse(localStorage.getItem(TOKEN_CYBER))))
     }, [])
-    console.log(_.sortBy(userInfo.thongTinDatVe, "ngayDat"))
+    // console.log(_.sortBy(userInfo.thongTinDatVe, "ngayDat"))
 
     const renderTicketBooking = () => {
         if (userInfo.thongTinDatVe.length) {

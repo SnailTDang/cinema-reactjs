@@ -13,7 +13,7 @@ export const TicketsRoomReducer = (state = initialState, action) => {
         case GET_TICKET_ROOM:
             state.selectingSeats = []
             state.roomTickets = action.value
-            console.log(state.selectingSeats)
+            // console.log(state.selectingSeats)
             return { ...state }
         case POST_SELECT_SEAT:
             let selectSeatUppdate = [...state.selectingSeats]
@@ -28,7 +28,7 @@ export const TicketsRoomReducer = (state = initialState, action) => {
             return { ...state, selectingSeats: selectSeatUppdate }
         case LEAVE_TAB:
             state.tabDefault = action.value
-            console.log(state.tabDefault)
+            // console.log(state.tabDefault)
             return { ...state }
         default:
             return state

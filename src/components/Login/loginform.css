@@ -203,11 +203,9 @@ iframe {
     background: rgba(0, 0, 0, 0.1);
 }
 .login100-form {
-    width: 560px;
     /* max-height: 60vh; */
     display: block;
-    background-color: #f7f7f7;
-    padding: 55px 55px;
+    padding: 35px;
 }
 .login100-form-title {
     width: 100%;
@@ -234,7 +232,7 @@ iframe {
     font-size: 15px;
 }
 .label-input100 {
-    background-color: #f7f7f7;
+    background-color: #fff;
     font-size: 16px;
     line-height: 1.2;
     display: block;
@@ -395,7 +393,6 @@ input.input100 {
 
 @media (max-width: 992px) {
     .login100-form {
-        width: 50%;
         padding-left: 30px;
         padding-right: 30px;
     }

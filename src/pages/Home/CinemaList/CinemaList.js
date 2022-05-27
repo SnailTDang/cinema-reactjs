@@ -2,6 +2,8 @@ import React, { memo } from 'react'
 import { Tabs, Space } from 'antd';
 import { Link, NavLink } from 'react-router-dom';
 import moment from 'moment';
+import './home.css'
+
 
 const { TabPane } = Tabs;
 
@@ -34,7 +36,9 @@ const renderCinemeList = (list) => {
                                                 <img src={movies.hinhAnh} alt="" className='w-20' />
                                             </div>
                                             <div className="ml-8">
-                                                <h1 className='text-xl font-bold text-orange-400'>{movies.tenPhim.toUpperCase()}</h1>
+                                                <NavLink exact to={`/movie/${movies.maPhim}`}>
+                                                    <h1 className='text-xl font-bold text-orange-400 mb-3 hover:text-white'>{movies.tenPhim.toUpperCase()}</h1>
+                                                </NavLink>
                                                 <div className="grid grid-cols-6 gap-3">
                                                     {movies.lstLichChieuTheoPhim?.slice(0, 10).map((shTimes, index) => {
                                                         return (
@@ -60,27 +64,18 @@ const renderCinemeList = (list) => {
 }
 
 const CinemasList = (props) => {
-    console.log(props.cinemaCyber)
+    // console.log(props.cinemaCyber)
     return (
-        <div className='' style={{
-            background: `url('https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg')`,
-            color: "#fff",
-            backgroundPosition: "top",
-            backgroundSize: "cover",
-            backgroundAttachment: "fixed",
-            backgroundRepeat: "no-repeat"
-        }}>
-            <div className="backdrop" >
-                <div className='container pt-28 pb-20' id='showtimes-cinema'>
-                    <h1 className="text-orange-main font-bold text-3xl text-center">CINEMAS NETWORK</h1>
-                    <Space style={{ marginBottom: 24 }}>
-                    </Space>
-                    <Tabs tabPosition={'top'}>
-                        {renderCinemeList(props.cinemaCyber)}
-                    </Tabs>
-                </div>
+        <div className="" >
+            <div className='container pt-20 pb-20' id='showtimes-cinema'>
+                <h1 className="text-orange-500 font-bold text-3xl text-center">CINEMAS NETWORK</h1>
+                <Space style={{ marginBottom: 24 }}>
+                </Space>
+                <Tabs tabPosition={'top'}>
+                    {renderCinemeList(props.cinemaCyber)}
+                </Tabs>
             </div>
-        </div >
+        </div>
     )
 }
 

@@ -15,7 +15,7 @@ export default function Showtimes() {
 
     return (
         <>
-            <div className="m-[-50px]"></div>
+            {/* <div className="m-[-40px]"></div> */}
             <CinemaList cinemaCyber={cinemaCyber} />
         </>
     )

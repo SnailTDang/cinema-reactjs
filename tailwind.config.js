@@ -12,7 +12,7 @@ module.exports = {
 
       // default breakpoints but with 40px removed
       screens: {
-        "xs": "",
+        "xs": "420px",
         "sm": '540px',
         "md": '	720px',
         "lg": '960px',
@@ -68,6 +68,7 @@ module.exports = {
         'strong-blue': '#031327',
         'orange-main': '#ff5400',
         'btn-home': '#ffa83d ',
+        "blue-main": "#0f1d2f"
       },
     },
   },

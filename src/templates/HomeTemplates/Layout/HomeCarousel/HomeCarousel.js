@@ -48,34 +48,36 @@ export default function HomeCarousel() {
         })
     }
     return (
-        <div className="container mx-auto">
-            <Swiper
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs, Autoplay, EffectFade]}
-                spaceBetween={10}
-                loop={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                effect={"fade"}
-                navigation={true}
-                pagination={{ dynamicBullets: true, }}
-                className="mySwiper2"
-            >
-                {renderBanner()}
-            </Swiper >
-            <Swiper
-                onSwiper={setThumbsSwiper}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={5}
-                watchSlidesProgress={true}
-                modules={[Navigation, Thumbs]}
-                className="mySwiper"
-            >
-                {renderThumbBanner()}
-            </Swiper>
+        <div className="py-5">
+            <div className="container mx-auto">
+                <Swiper
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[FreeMode, Navigation, Thumbs, Autoplay, EffectFade]}
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    effect={"fade"}
+                    navigation={true}
+                    pagination={{ dynamicBullets: true, }}
+                    className="mySwiper2"
+                >
+                    {renderBanner()}
+                </Swiper >
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    loop={true}
+                    spaceBetween={10}
+                    slidesPerView={5}
+                    watchSlidesProgress={true}
+                    modules={[Navigation, Thumbs]}
+                    className="mySwiper"
+                >
+                    {renderThumbBanner()}
+                </Swiper>
+            </div>
         </div>
     )
 }

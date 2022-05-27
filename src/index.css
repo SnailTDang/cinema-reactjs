@@ -42,7 +42,7 @@ html {
 }
 
 .backdrop {
-    background: rgba(255, 255, 255, 0.511);
+    background: #95959536;
     /* backdrop-filter: blur(10px); */
 }
 
@@ -54,6 +54,11 @@ html {
 .backdrop-ticket {
     background: #eadfd117;
     /* backdrop-filter: blur(10px); */
+}
+
+.backdrop-detail {
+    background: #3e2f1ca6;
+    backdrop-filter: blur(4px);
 }
 
 .bg-btn-home {
@@ -71,143 +76,4 @@ html {
 }
 
 .ant-tabs-tab-active #rc-tabs-2-tab-1 {
-}
-
-footer #list-social ul.list-inline li {
-    float: none;
-}
-footer #list-social ul.list-inline {
-    width: 100%;
-    text-align: center;
-}
-footer .container li {
-    list-style: none;
-    float: none;
-}
-footer .content-1 h3.info,
-footer .content-2 h3.info,
-footer .content-2 h3.info a,
-footer h2 {
-    color: #ffffff;
-}
-footer h2 {
-    font-weight: bold;
-    font-size: 24px;
-}
-footer {
-    background: #031327;
-}
-footer p {
-    color: #ffffff;
-}
-footer a {
-    color: #7e8eaa;
-    text-transform: uppercase;
-}
-footer a:focus {
-    color: #7e8eaa;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #ff5400;
-    text-decoration: none;
-}
-footer .content-1 {
-    margin-top: 40px;
-}
-footer .content-1 .marg-top30 {
-    margin-top: 30px;
-}
-footer .content-1 .marg-top26 {
-    margin-top: 26px;
-}
-.info {
-    text-transform: uppercase;
-    font-size: 18px;
-}
-.address {
-    margin-top: 20px;
-    line-height: 1.4;
-    padding-right: 15px;
-}
-.map-left {
-    padding-left: 10px;
-    position: relative;
-    top: 20px;
-    float: left;
-}
-img.map-trigger {
-    display: inline-block;
-    float: left;
-}
-.show {
-    display: inline-block !important;
-}
-footer .content-1 .list {
-    padding-top: 12px;
-}
-footer .content-1 .list li {
-    padding-top: 14px;
-}
-footer .content-1 .list li a {
-    font-size: 18px;
-}
-footer .content-2 {
-    margin-top: 40px;
-}
-#facebook-like {
-    padding-bottom: 20px;
-}
-footer #content-map {
-    margin-top: 40px;
-    /* display: none; */
-}
-footer hr {
-    border: 1px solid #263547;
-}
-footer .content-3 {
-    padding-bottom: 20px;
-}
-footer .content-3 p {
-    font-size: 14px;
-    color: #7e8eaa;
-    text-transform: uppercase;
-}
-footer .company-info {
-    padding-top: 15px;
-}
-footer .company-info p {
-    margin-bottom: 5px;
-}
-footer .icon-notify {
-    max-width: 200px;
-    max-height: 70px;
-    display: block;
-}
-footer .footer-notify {
-    padding-left: 30px;
-}
-footer a[href^="tel"] {
-    color: #ffffff;
-}
-#logo-bottom {
-    padding-bottom: 10px;
-}
-footer #content-map iframe {
-    height: 0;
-    padding-right: 0px;
-    transition: all 0.3s ease-in;
-    transform-origin: top;
-}
-footer .content-1 .map .pull-left {
-    padding-left: 0px;
-    margin-top: 0px;
-}
-footer .fb-custom {
-    padding-left: 30px;
-    padding-right: 0px;
-}
-footer .copyright-footer {
-    text-align: right;
-    padding-right: 0;
 }

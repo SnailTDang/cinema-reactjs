@@ -25,7 +25,7 @@ export default function ChecoutTickets(props) {
         dispatch(action)
         dispatch(GetTicketsUserAction(JSON.parse(localStorage.getItem(TOKEN_CYBER))))
     }, [])
-    console.log(danhSachGhe)
+    // console.log(danhSachGhe)
 
     const renderSeats = () => {
         return danhSachGhe?.map((seat, index) => {
@@ -109,8 +109,8 @@ export default function ChecoutTickets(props) {
                                 {renderSeats()}
                             </div>
                             <div className="mt-10">
-                                <h1 className="text-2xl text-white">
-                                    Chú thích ghế
+                                <h1 className="text-2xl text-white mb-4">
+                                    SEATS LIST
                                 </h1>
                                 <div className="list-seat flex justify-between">
                                     <div className="text-center">

@@ -34,7 +34,7 @@ export default function Footer() {
                     <Col lg={6} className="col-lg-3 col-md-3 col-sm-3 col-xs-6 marg-top30">
                         <h2>VISION CINEMA</h2>
                         <ul className="list">
-                            <li><NavLink exact to="/about">INTRODUCTION</NavLink></li>
+                            <li><NavLink exact to="/about">ABOUT US</NavLink></li>
                             <li><a href="/">CAREER</a></li>
                             <li><NavLink exact to="/contact/">CONTACT</NavLink></li>
                         </ul>

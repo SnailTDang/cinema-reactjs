@@ -1,5 +1,7 @@
 import { TOKEN_CYBER, USER_LOGIN, USER_SIGN_IN, USER_LOGIN_FAIL, USER_SIGNIN_FAIL } from "../../ulti/constants/Settings"
 import { GET_TICKETS_USER_BOOK } from "../types/UserLoginType"
+import _ from 'lodash'
+
 
 
 
@@ -33,6 +35,7 @@ export const UserLoginReducer = (state = initialState, action) => {
             return { ...state }
         case GET_TICKETS_USER_BOOK:
             state.userInfo = action.value
+            state.userInfo.thongTinDatVe = _.reverse(state.userInfo.thongTinDatVe, "ngayDat")
             return { ...state }
         default:
             return state

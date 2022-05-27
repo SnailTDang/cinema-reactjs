@@ -43,6 +43,7 @@ export const GetTicketsUserAction = (token) => {
                 value: result.data.content
             }
             dispatch(action)
+            console.log(action)
             await dispatch(hideLoadingAction)
         }
         catch (error) {

@@ -10,6 +10,7 @@ import { AboutTemplate } from './templates/AboutTemplate/AboutTemplate';
 import ShowtimesTemplate from './templates/ShowtimesTemplate/ShowtimesTemplate';
 import NewsTemplate from './templates/NewsTemplate/NewsTemplate';
 import CheckoutTemplate from './templates/CheckoutTemplate/CheckoutTemplate'
+import HistoryBookingTemplate from './templates/HistoryBookingTemplate/HistoryBookingTemplate';
 
 
 import Home from './pages/Home/Home';
@@ -22,6 +23,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Checkout from './pages/Checkout/Checkout';
 import Showtimes from './pages/Showtimes/Showtimes';
 import About from './pages/About/About';
+import HistoryBooking from './pages/HistoryBooking/HistoryBooking';
 
 
 
@@ -29,7 +31,7 @@ export const history = createBrowserHistory()
 
 function App() {
   return (
-    <div className="wrapper m-auto">
+    <div className="wrapper m-auto overflow-hidden">
       <Router history={history}>
         <ScrollToTop />
         <Switch>
@@ -42,6 +44,7 @@ function App() {
           <SignUpTemplate exact path='/register' Component={Register} />
           <DetailTemplate exact path='/movie/:id' Component={DeitailMovies} />
           <AboutTemplate exact path='/about' Component={About} />
+          <HistoryBookingTemplate exact path='/history-booking' Component={HistoryBooking} />
           <CheckoutTemplate exact path='/checkout/:id' Component={Checkout} />
         </Switch>
       </Router>

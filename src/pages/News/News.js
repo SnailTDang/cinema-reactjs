@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd';
 import './news.css'
+import { NavLink } from 'react-router-dom';
 
 export default function News() {
     return (
@@ -17,19 +18,19 @@ export default function News() {
                     <Col span={6}>
                         <div className="news-item">
                             <img className="item-img" src="https://metiz.vn/media/new_offer/NOEL_METIZ_2019_GIANG_SINH_AM_AP_WEB-01.jpg" alt="MĂM COMBO, NHẬN NGAY QUÀ TẶNG ẤM ÁP TẠI METIZ CINEMA" />
-                            <a className="bg_hover word-wrap" href="/new/detail/35/">
+                            <NavLink exact to="/home" className="bg_hover word-wrap" href="/new/detail/35/">
                                 <h1 className='font-bold text-white'>MĂM COMBO, NHẬN NGAY QUÀ TẶNG ẤM ÁP TẠI VISION CINEMA</h1>
                                 <h4 className="detail-btn">DETAILS</h4>
-                            </a>
+                            </NavLink>
                         </div>
                     </Col>
                     <Col span={6}>
                         <div className="news-item">
                             <img className="item-img" src="https://metiz.vn/media/new_offer/HALLOWEEN_2019_WEB-01.jpg" alt="XEM PHIM METIZ NHẬN KẸO CÒN KHÔNG BỊ GHẸO DỊP LỄ HALLOWEEN" />
-                            <a className="bg_hover word-wrap" href="/new/detail/34/">
+                            <NavLink exact to="/home" className="bg_hover word-wrap" href="/new/detail/34/">
                                 <h1 className='font-bold text-white'>XEM PHIM VISION NHẬN KẸO CÒN KHÔNG BỊ GHẸO DP LỄ HALLOWEEN...</h1>
                                 <h4 className="detail-btn">DETAILS</h4>
-                            </a>
+                            </NavLink>
                         </div>
                     </Col>
                 </Row>
@@ -37,28 +38,28 @@ export default function News() {
                     <Col span={6}>
                         <div className="news-item">
                             <img className="item-img" src="https://metiz.vn/media/new_offer/20.10.2019_WEB-01.jpg" alt="XEM PHIM METIZ, NHẬN QUÀ NGỌT NGÀO DỊP LỄ 20/10" />
-                            <a className="bg_hover word-wrap" href="/new/detail/33/">
+                            <NavLink exact to="/home" className="bg_hover word-wrap" href="/new/detail/33/">
                                 <h1 className='font-bold text-white'>XEM PHIM VISION, NHẬN QUÀ NGỌT NGÀO DỊP LỄ 20/1</h1>
                                 <h4 className="detail-btn">DETAILS</h4>
-                            </a>
+                            </NavLink>
                         </div>
                     </Col>
                     <Col span={6}>
                         <div className="news-item">
                             <img className="item-img" src="https://metiz.vn/media/new_offer/METIZ_TRUNG_THU_2019_WEB-01.jpg" alt="XEM PHIM METIZ, RƯỚC LỒNG ĐÈN XINH" />
-                            <a className="bg_hover word-wrap" href="/new/detail/32/">
+                            <NavLink exact to="/home" className="bg_hover word-wrap" href="/new/detail/32/">
                                 <h1 className='font-bold text-white'>XEM PHIM VISION, RƯỚC LỒNG ĐÈN XINH</h1>
                                 <h4 className="detail-btn">DETAILS</h4>
-                            </a>
+                            </NavLink>
                         </div>
                     </Col>
                     <Col span={6}>
                         <div className="news-item">
                             <img className="item-img" src="https://metiz.vn/media/new_offer/KM_SUPER__MONDAY_MEDIA-02.jpg" alt="SUPER MONDAY (THỨ HAI SIÊU HẠNG)" />
-                            <a className="bg_hover word-wrap" href="/new/detail/17/">
+                            <NavLink exact to="/home" className="bg_hover word-wrap" href="/new/detail/17/">
                                 <h1 className='font-bold text-white'>SUPER MONDAY (THỨ HAI SIÊU HẠNG)</h1>
                                 <h4 className="detail-btn">DETAILS</h4>
-                            </a>
+                            </NavLink>
                         </div>
                     </Col>
                     <Col span={6}>

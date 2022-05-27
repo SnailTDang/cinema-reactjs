@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { history } from '../../../../App'
 import { USER_LOGIN, TOKEN_CYBER } from '../../../../ulti/constants/Settings'
+import StatusUser from './StatusUser/StatusUser'
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 // import { Drawer, Button } from "antd";
 // import { Menu } from "antd";
 
@@ -18,51 +21,13 @@ const isActiveMenu = (isActive) => {
     }
 }
 
-const renderUser = (user) => {
-    if (!user) {
-        return (
-            <div className="items-center flex-shrink-0 hidden lg:flex">
-                <NavLink to='/login' exact
-                    className={isActive => {
-                        return isActiveMenu(isActive) + " border-none"
-                    }}>
-                    Sign in
-                </NavLink>
-                <span className='text-3xl'>/</span>
-                <NavLink exact to='/register'
-                    className={isActive => {
-                        return isActiveMenu(isActive) + " border-none"
-                    }}>
-                    Sign up
-                </NavLink>
-            </div>
-        )
-    } else {
-        return (
-            <div className="items-center flex-shrink-0 hidden lg:flex">
-                <button className="text-lg self-center px-3 rounded" >{user.hoTen}</button>
-                <span className='text-3xl'>/</span>
-                <button className="text-lg self-center font-semibold px-3 rounded hover:text-orange-main"
-                    onClick={() => {
-                        localStorage.removeItem(USER_LOGIN)
-                        localStorage.removeItem(TOKEN_CYBER)
-                        history.push('/')
-                        window.location.reload()
-                    }}
-                >
-                    Log Out
-                    <i className="fa fa-sign-out-alt pl-2"></i>
-                </button>
-            </div>
-        )
-    }
-}
+
 
 export default function Header(props) {
     let userLogin = JSON.parse(localStorage.getItem(USER_LOGIN))
     return (
         <>
-            <header className="pb-5 bg-blue-main bg-opacity-500/75 dark:text-coolGray-100 w-100 z-10000 text-white">
+            <header className="pb-5 bg-blue-main bg-opacity-500/75 dark:text-coolGray-100 w-100 z-10000 text-white sticky top-0">
                 <div className="header-info hidden-xs">
                     <div className="header-container container">
                         <div className="header-right">
@@ -77,12 +42,12 @@ export default function Header(props) {
                         </div>
                     </div>
                 </div>
-                <div className="bg-strong-blue bg-opacity-500/75 sticky top-0">
+                <div className="bg-strong-blue bg-opacity-500/75">
                     <div className="container flex justify-between mx-auto relative">
                         <a href='/' className="block w-fit items-center absolute -top-14 left-4 -bottom-4 bg-strong-blue bg-opacity-500/75">
                             <img src={'https://snailtdang.github.io/cyberphone/img/Brandlogo.png'} alt="" className='w-32' />
                         </a>
-                        <ul className="items-stretch space-x-3 flex mb-0 ml-40 lg:ml-72">
+                        <ul className="items-stretch space-x-3 flex mb-0 ml-20 lg:ml-64">
                             <li className="flex">
                                 <NavLink to="/" exact
                                     className={isActive => isActiveMenu(isActive)}
@@ -102,7 +67,7 @@ export default function Header(props) {
                                 >CONTACT</NavLink>
                             </li>
                         </ul>
-                        {renderUser(userLogin)}
+                        <StatusUser user={userLogin} />
                         <button className="p-4 lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-coolGray-100">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

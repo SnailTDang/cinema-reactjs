@@ -14,7 +14,7 @@ module.exports = {
       screens: {
         "xs": "420px",
         "sm": '540px',
-        "md": '	720px',
+        "md": '	768px',
         "lg": '960px',
         "xl": '1140px',
         '2xl': '1320px',
@@ -39,6 +39,7 @@ module.exports = {
       },
       minHeight: {
         '60vh': '60vh',
+        "20vh": '20vh',
       },
       maxWidth: {
         '250': "250px",

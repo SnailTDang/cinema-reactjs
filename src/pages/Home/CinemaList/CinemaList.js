@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Tabs, Space } from 'antd';
+import { Tabs, Space, Row, Col } from 'antd';
 import { Link, NavLink } from 'react-router-dom';
 import moment from 'moment';
 import './home.css'
@@ -31,15 +31,15 @@ const renderCinemeList = (list) => {
                             {cine.danhSachPhim.map((movies, index) => {
                                 return (
                                     <div className="flex border-b-2 p-4" key={index}>
-                                        <div className="flex">
-                                            <div>
+                                        <div className="grow flex">
+                                            <div className=''>
                                                 <img src={movies.hinhAnh} alt="" className='w-20' />
                                             </div>
-                                            <div className="ml-8">
+                                            <div className="ml-4 grow">
                                                 <NavLink exact to={`/movie/${movies.maPhim}`}>
                                                     <h1 className='text-xl font-bold text-orange-400 mb-3 hover:text-white'>{movies.tenPhim.toUpperCase()}</h1>
                                                 </NavLink>
-                                                <div className="grid sm:grid-cols-3 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
+                                                <div className="grid xs:grid-cols-2 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
                                                     {movies.lstLichChieuTheoPhim?.slice(0, 10).map((shTimes, index) => {
                                                         return (
                                                             <Link to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 bg-btn-home text-white'>
@@ -67,7 +67,7 @@ const CinemasList = (props) => {
     // console.log(props.cinemaCyber)
     return (
         <div className="" >
-            <div className='container pt-20 pb-20' id='showtimes-cinema'>
+            <div className='container pt-10 pb-20' id='showtimes-cinema'>
                 <h1 className="text-orange-500 font-bold text-3xl text-center">CINEMAS NETWORK</h1>
                 <Space style={{ marginBottom: 24 }}>
                 </Space>

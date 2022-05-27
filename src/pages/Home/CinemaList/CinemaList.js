@@ -9,15 +9,15 @@ const { TabPane } = Tabs;
 
 const renderCinemeList = (list) => {
     return list?.map((cinemas, index) => {
-        return <TabPane tab={<img className='w-20' src={cinemas.logo} />} key={index}>
+        return <TabPane tab={<img className='w-20 m-auto' src={cinemas.logo} />} key={index}>
             <Tabs tabPosition={'left'}>
                 {cinemas.lstCumRap.slice(0, 6).map((cine, index) => {
                     return <TabPane
-                        className='w-fit border-b-2'
+                        className='w-full'
                         tab={
                             <div className='flex items-center justify-center'>
                                 <img className='w-20' src={cine.hinhAnh} />
-                                <div className="text-left ml-4 w-80 text-white ">
+                                <div className="text-left ml-4 lg:w-80 w-full text-white ">
                                     <p className='text-lg mb-0 break-words whitespace-pre-wrap hover:text-orange-300'>{cine.tenCumRap}</p>
                                     <p className='break-words whitespace-pre-wrap'>{cine.diaChi}</p>
                                     <a href={`https://www.google.com/maps/search/${cine.diaChi}?transaction_id=`} target='_blank' className='py-1 px-2 bg-orange-main text-white hover:text-white inline-block mt-2'>
@@ -39,7 +39,7 @@ const renderCinemeList = (list) => {
                                                 <NavLink exact to={`/movie/${movies.maPhim}`}>
                                                     <h1 className='text-xl font-bold text-orange-400 mb-3 hover:text-white'>{movies.tenPhim.toUpperCase()}</h1>
                                                 </NavLink>
-                                                <div className="grid grid-cols-6 gap-3">
+                                                <div className="grid sm:grid-cols-3 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
                                                     {movies.lstLichChieuTheoPhim?.slice(0, 10).map((shTimes, index) => {
                                                         return (
                                                             <Link to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 bg-btn-home text-white'>

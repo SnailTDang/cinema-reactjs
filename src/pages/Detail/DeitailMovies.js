@@ -25,8 +25,8 @@ export default function DeitailMovies(props) {
             <div className="backdrop-detail">
                 <div className="container py-10">
                     <Row className='backdrop-info'>
-                        <Col xs={24} sm={12} md={12} lg={20}>
-                            <div className="flex items-end">
+                        <Col xs={24} sm={24} md={20} lg={20}>
+                            <div className="sm:flex items-end">
                                 <div className="image-movie" style={{ flex: '0 0 30%' }}>
                                     <img src={hinhAnh} alt="" className='h-400 w-full' />
                                 </div>
@@ -63,7 +63,7 @@ export default function DeitailMovies(props) {
                                 </div>
                             </div>
                         </Col>
-                        <Col xs={24} sm={12} md={12} lg={4} >
+                        <Col xs={24} sm={24} md={4} lg={4} >
                             <div className="flex items-end h-full justify-center">
                                 <div className="rating">
                                     <h3 className='text-center text-2xl font-bold text-orange-main'>Rating</h3>
@@ -79,7 +79,7 @@ export default function DeitailMovies(props) {
                         </Col>
                     </Row>
                     <Row className='py-10 bg-white my-10'>
-                        <Tabs tabPosition={"left"}>
+                        <Tabs tabPosition={"left"} id="detail-tabs">
                             {heThongRapChieu?.map((cinemas, index) => {
                                 return (
                                     <TabPane tab={
@@ -95,7 +95,7 @@ export default function DeitailMovies(props) {
                                                             <p className='mb-0'>{cinema.diaChi}</p>
                                                         </div>
                                                     </div>
-                                                    <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10 gap-3 py-4">
+                                                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 xl:grid-cols-10 gap-3 py-4">
                                                         {cinema.lichChieuPhim?.map((shTimes, index) => {
                                                             return (
                                                                 <NavLink exact to={`/checkout/${shTimes.maLichChieu}`} key={index} className='text-lg font-bold p-2 border-2 border-orange-main bg-yellow-200'>

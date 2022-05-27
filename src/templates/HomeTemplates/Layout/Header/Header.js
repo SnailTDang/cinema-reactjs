@@ -77,7 +77,7 @@ export default function Header(props) {
                         </div>
                     </div>
                 </div>
-                <div className="bg-strong-blue bg-opacity-500/75 sticky top-0 left-0 right-0">
+                <div className="bg-strong-blue bg-opacity-500/75 sticky top-0">
                     <div className="container flex justify-between mx-auto relative">
                         <a href='/' className="block w-fit items-center absolute -top-14 left-4 -bottom-4 bg-strong-blue bg-opacity-500/75">
                             <img src={'https://snailtdang.github.io/cyberphone/img/Brandlogo.png'} alt="" className='w-32' />

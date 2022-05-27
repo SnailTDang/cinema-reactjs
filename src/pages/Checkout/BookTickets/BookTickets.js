@@ -2,21 +2,36 @@ import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import moment from 'moment'
 import _ from 'lodash'
-import { GetTicketsUserAction } from '../../../redux/actions/UserLoginAction'
-import { TOKEN_CYBER } from '../../../ulti/constants/Settings'
+import { NavLink } from 'react-router-dom'
+import { ListMoviesAction } from '../../../redux/actions/ListMoviesAction'
+import { history } from '../../../App'
 
 
 
 export default function BookTickets(props) {
-    console.log(props.userInfo)
+    const { moviesList } = useSelector(state => state.ListMoviesReducer);
     const dispatch = useDispatch()
     useEffect(() => {
-        // dispatch(GetTicketsUserAction(JSON.parse(localStorage.getItem(TOKEN_CYBER))))
+        dispatch(ListMoviesAction('GP03'))
     }, [])
-
+    const getIdMovie = (name) => {
+        let idFilm = ""
+        let film = moviesList.arrayMovie.find(item => {
+            return item.tenPhim === name
+        });
+        if (film) {
+            idFilm = `/movie/${film.maPhim}`
+        } else {
+            idFilm = `/history-booking`
+        }
+        return idFilm;
+    }
     const renderTicketBooking = () => {
+
         if (props.userInfo.thongTinDatVe?.length) {
+            console.log(props.userInfo)
             return props.userInfo.thongTinDatVe?.map((ticket, index) => {
+                // getIdMovie(ticket.tenPhim)
                 let cost = ticket.giaVe * ticket.danhSachGhe.length
                 return (
                     <div className="p-2 md:w-1/2 w-full" key={index}>
@@ -30,7 +45,7 @@ export default function BookTickets(props) {
                                     <span className="text-orange-main text-xl font-bold">{ticket.maVe}</span>
                                 </div>
                                 <div className="name mb-2">
-                                    <h2 className="text-white text-2xl font-bold mb-2 ">{ticket.tenPhim}</h2>
+                                    <NavLink exact to={`${getIdMovie(ticket.tenPhim)}`}> <h2 className="text-white text-2xl font-bold mb-2 hover:text-yellow-400">{ticket.tenPhim}</h2></NavLink>
                                 </div>
                                 <div className="time-book mb-2">
                                     <span className='text-gray-200 text-base'>Date: </span>

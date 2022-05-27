@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { UserLoginAction } from '../../redux/actions/UserLoginAction';
 
-// import "./loginform.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { UserSignInAction } from '../../redux/actions/UserSignInAction';
 import { NavLink } from 'react-router-dom';
@@ -70,7 +68,6 @@ export default function RegisterForm(props) {
             const action = UserSignInAction(user)
             dispatch(action)
             setSigninMess(signinfail)
-            console.log(user)
         },
     });
 
@@ -89,8 +86,6 @@ export default function RegisterForm(props) {
         )
         setSigninMess('')
     }
-
-    console.log(signinMess)
 
     return (
         <div className="limiter">

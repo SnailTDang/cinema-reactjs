@@ -19,7 +19,7 @@ const Home = (props) => {
         dispatch(ListCinemaAction('GP03'))
     }, [])
 
-
+    console.log(moviesList)
     return (
         <>
             <PopupTrailer />

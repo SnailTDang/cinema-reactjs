@@ -17,7 +17,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-export default function HomeCarousel() {
+export default function HomeCarousel(props) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const { bannerList } = useSelector(state => state.BannerReducer);
     const dispatch = useDispatch()

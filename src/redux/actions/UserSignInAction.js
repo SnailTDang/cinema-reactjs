@@ -14,7 +14,7 @@ export const UserSignInAction = (user) => {
                     value: result.data.content
                 }
                 dispatch(action)
-                history.goBack()
+                history.go("/login")
             }
         })
         promise.catch(error => {

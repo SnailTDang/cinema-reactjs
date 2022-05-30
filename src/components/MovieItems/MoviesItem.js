@@ -21,9 +21,9 @@ export default function MoviesItem(props) {
             </NavLink>
             <div className="p-5 backdrop">
                 <NavLink to={`/movie/${props.movie.maPhim}`}>
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight dark:text-white overflow-hidden hover:text-orange-500" style={styleName} title={props.movie.tenPhim}>{props.movie.tenPhim.toUpperCase()}</h5>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-white overflow-hidden hover:text-orange-500" style={styleName} title={props.movie.tenPhim}>{props.movie.tenPhim.toUpperCase()}</h5>
                 </NavLink>
-                <p className="mb-3 font-normal text-white dark:text-white">PREMIERES ON: {moment(props.movie.ngayKhoiChieu).format("MMM DD, YYYY")}</p>
+                <p className="mb-3 font-normal text-white text-white">PREMIERES ON: {moment(props.movie.ngayKhoiChieu).format("MMM DD, YYYY")}</p>
                 <div className="">
                     <NavLink to={`/movie/${props.movie.maPhim}`} className="inline-flex items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg mr-4 border-orange-600 border-2 hover:bg-orange-500 hover:text-white">
                         TICKET
